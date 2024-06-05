@@ -1,0 +1,92 @@
+@import '/src/assets/styles/_variables.scss';
+@import '/src/assets/styles/_variables.scss';
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	@include applyStyles($container);
+
+	> .head {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+
+		> a {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			width: 30px;
+			height: 30px;
+
+			> svg {
+				fill: $black;
+				width: 100%;
+				height: 100%;
+
+				transition: $transition;
+
+				&:hover {
+					fill: $accent;
+				}
+			}
+		}
+
+		> .title {
+			color: $black;
+			font-size: 30px;
+			font-weight: 800;
+
+			> span {
+				color: $accent;
+			}
+		}
+	}
+
+	> .addPanel {
+		display: flex;
+		width: 100%;
+	}
+
+	> .table {
+		border-collapse: collapse;
+		width: 100%;
+
+		thead {
+			th {
+				color: $white;
+				background-color: $accent;
+				border: 1px solid $dark-white;
+				padding: 5px 0;
+			}
+		}
+
+		tbody {
+			th {
+				border: 1px solid $accent;
+			}
+		}
+
+		svg {
+			cursor: pointer;
+		}
+	}
+}
+
+.preloadBlock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	height: 100vh;
+}
